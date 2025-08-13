@@ -25,7 +25,8 @@ def initialize_yolo_model(model_path, confidence_threshold = 0.3):
         device=device
     )
 
-def perform_sliced_prediction(image_path, detection_model, slice_height=400, slice_width = 400, overlap_height_ratio = 0.2, overlap_width_ratio = 0.2):
+# customize the slice width and height as per the requirement of the image file, small size -> better results but slow, large size -> good results and faster
+def perform_sliced_prediction(image_path, detection_model, slice_height=1500, slice_width = 1500, overlap_height_ratio = 0.2, overlap_width_ratio = 0.2):
     result = get_sliced_prediction(
         image_path,
         detection_model,
