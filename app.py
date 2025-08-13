@@ -57,8 +57,8 @@ def process_pdf_with_yolo(pdf_path, model_path, output_image_path):
     return extract_coordinates(prediction_result)
 
 if __name__ == "__main__":
-    pdf_path = "PDFs/basement.pdf"
-    model_path = "model/best.pt"  
+    pdf_path = "PDFs/basement.pdf" # example PDF is present in the PDFs folder
+    model_path = "model/best.pt"  # The actual model path
     output_image_path = "images.png"
     
     try:
